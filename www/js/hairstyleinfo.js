@@ -1,9 +1,9 @@
-function HairStyleInfo(name, title, description) {
-    this.name = name;
-    this.title = title;
+function HairStyleInfo(style, title, description) {
+    this.style = style;
+    this.title = 'The ' + title;
     this.description = description;
-    this.mainImg = this.name + 'main.jpg';
-    this.extraPic1 = this.name + '1.jpg' ;
-    this.extraPic2 = this.name + '2.jpg' ;
-    this.extrapic3 = this.name + '3.jpg' ;
+    this.mainImage = '/' + style + '/' + style + 'main.jpg';
+    this.image1 = '/' + style + '/' + style + '1.jpg';
+    this.image2 = '/' + style + '/' + style + '2.jpg';
+    this.image3 = '/' + style + '/' + style + '3.jpg';
 }
