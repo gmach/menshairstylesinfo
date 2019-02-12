@@ -1,0 +1,162 @@
+@import "../../bower_components/normalize.css/normalize.css";
+//@import "external/qunit";
+
+@import "base/variables";
+@import "base/mixins";
+@import "base/scaffolding";
+@import "base/typeography";
+@import "base/utilities";
+
+@import "components/buttons";
+
+$brandcolor: #95c53f;
+$basemockcolor: #eeeeee;
+
+a {
+ &:hover {
+  text-decoration: none;
+  color: #fff;
+ } 
+}
+
+.header {
+  background: #fff;
+}
+
+.logo {
+  background: url(http://digital8.com.au/assets/images/main/logo-digital8.svg) no-repeat 8px 2px;
+  text-indent: 54px;
+  width: 205px;
+  font-size: 1.4em;
+  padding: 11px;
+  color: black;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.hamburgerbtn {
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  margin: 10px;
+  .icon-bar {
+    background-color: $brandcolor;
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    +.icon-bar {
+      margin-top: 4px;
+    }
+  }
+}
+
+.hamburgerwrapper {
+  display: none;
+  text-indent: 25px;
+  background: $brandcolor;
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.closenav {
+  float: right;
+  color: #fff;
+  font-size: 2.0em;
+  margin-right: 10px;
+}
+.overlay-nav {
+  width: 200px;
+  margin: 0 auto;
+  clear: both;
+}
+
+.overlay-nav-max {
+  display: none;
+}
+
+.overlay-nav ul li {
+  list-style-type: none;
+  a {
+    color: #fff;    
+    text-transform: uppercase;
+    font-size: 2.0em;
+    &:hover {
+      color: darken($brandcolor, 20%)!important;
+    }
+  }
+}
+
+.activelink {
+  color: darken($brandcolor, 20%)!important;
+}
+
+.video {
+  height: 309px;
+  background: $basemockcolor;
+}
+
+.empowering {
+  background: darken($basemockcolor, 5%);
+}
+
+.servicequadrants {
+  background: darken($basemockcolor, 10%);
+}
+
+.recentlylaunched {
+  clear: both;
+  background: darken($basemockcolor, 15%);
+}
+
+.footer {
+background: darken($basemockcolor, 20%);
+}
+
+// small width
+@media only screen and (min-width: $screen-phone) {
+  .servicequadrants {
+    .article {
+      width: 50%;
+      float: left;
+    }
+  }
+}
+
+//Middle width
+@media only screen and (min-width: $screen-tablet) {
+  .hamburgerbtn {
+    display: none;
+  }
+  .overlay-nav-max {
+    display: block;
+      list-style-type: none;
+
+
+    li {
+      display: inline;
+      a {
+        color: darken($basemockcolor, 20%);
+        text-transform: uppercase;
+        font-size: 1.0em;
+        &:hover {
+          color: darken($brandcolor, 20%)!important;
+        }
+      }
+    }
+
+  }
+  .servicequadrants {
+    .article {
+      width: 25%;
+    }
+  }
+}
+
+// Maximum screen width
+@media only screen and (min-width: $screen-desktop) {
+}
+

@@ -1,0 +1,11 @@
+.project
+.settings
+target
+.classpath
+.DS_Store
+.idea
+node_modules
+bower_components
+.sass-cache
+static/css/**
+front-end/www/css/**

@@ -1,0 +1,410 @@
+@import url(../../bower_components/normalize.css/normalize.css);
+/* line 11, ../scss/base/_scaffolding.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 14, ../scss/base/_scaffolding.scss */
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 22, ../scss/base/_scaffolding.scss */
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 27, ../scss/base/_scaffolding.scss */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #333333;
+  background-color: #fff;
+}
+
+/* line 38, ../scss/base/_scaffolding.scss */
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+/* line 42, ../scss/base/_scaffolding.scss */
+a:hover, a:focus {
+  color: #2a6496;
+  text-decoration: underline;
+}
+
+/* line 55, ../scss/base/_scaffolding.scss */
+figure {
+  margin: 0;
+}
+
+/* line 62, ../scss/base/_scaffolding.scss */
+img {
+  vertical-align: middle;
+}
+
+/* line 67, ../scss/base/_scaffolding.scss */
+.img-responsive {
+  display: block;
+  width: 100% \9;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 71, ../scss/base/_scaffolding.scss */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  /* line 71, ../scss/base/_scaffolding.scss */
+  .container {
+    width: 768px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 71, ../scss/base/_scaffolding.scss */
+  .container {
+    width: 992px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 71, ../scss/base/_scaffolding.scss */
+  .container {
+    width: 1200px;
+  }
+}
+
+/* line 9, ../scss/base/_typeography.scss */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+/* line 17, ../scss/base/_typeography.scss */
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* line 23, ../scss/base/_typeography.scss */
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 30, ../scss/base/_typeography.scss */
+h1, .h1 {
+  font-size: 36px;
+}
+
+/* line 31, ../scss/base/_typeography.scss */
+h2, .h2 {
+  font-size: 30px;
+}
+
+/* line 32, ../scss/base/_typeography.scss */
+h3, .h3 {
+  font-size: 24px;
+}
+
+/* line 33, ../scss/base/_typeography.scss */
+h4, .h4 {
+  font-size: 18px;
+}
+
+/* line 34, ../scss/base/_typeography.scss */
+h5, .h5 {
+  font-size: 14px;
+}
+
+/* line 35, ../scss/base/_typeography.scss */
+h6, .h6 {
+  font-size: 12px;
+}
+
+/* line 41, ../scss/base/_typeography.scss */
+p {
+  margin: 0 0 10px;
+}
+
+/* line 47, ../scss/base/_typeography.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 48, ../scss/base/_typeography.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 49, ../scss/base/_typeography.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 50, ../scss/base/_typeography.scss */
+.text-justify {
+  text-align: justify;
+}
+
+/* line 51, ../scss/base/_typeography.scss */
+.text-nowrap {
+  white-space: nowrap;
+}
+
+/* line 54, ../scss/base/_typeography.scss */
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+/* line 55, ../scss/base/_typeography.scss */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* line 56, ../scss/base/_typeography.scss */
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+/* line 9, ../scss/base/_utilities.scss */
+.clearfix {
+  *zoom: 1;
+}
+/* line 2, ../scss/base/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+/* line 7, ../scss/base/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 12, ../scss/base/_utilities.scss */
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 15, ../scss/base/_utilities.scss */
+.pull-right {
+  float: right !important;
+}
+
+/* line 18, ../scss/base/_utilities.scss */
+.pull-left {
+  float: left !important;
+}
+
+/* line 27, ../scss/base/_utilities.scss */
+.hide {
+  display: none !important;
+}
+
+/* line 30, ../scss/base/_utilities.scss */
+.show {
+  display: block !important;
+}
+
+/* line 33, ../scss/base/_utilities.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 41, ../scss/base/_utilities.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* line 5, ../scss/components/_buttons.scss */
+.dangerbtn {
+  border: 1px solid red;
+}
+
+/* line 9, ../scss/components/_buttons.scss */
+.dangerbtn {
+  color: red;
+  /*  &:active,
+    &.active {
+  
+    }*/
+}
+
+/* line 16, ../scss/digital8.scss */
+a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* line 22, ../scss/digital8.scss */
+.header {
+  background: #fff;
+}
+
+/* line 26, ../scss/digital8.scss */
+.logo {
+  background: url(http://digital8.com.au/assets/images/main/logo-digital8.svg) no-repeat 8px 2px;
+  text-indent: 54px;
+  width: 205px;
+  font-size: 1.4em;
+  padding: 11px;
+  color: black;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* line 37, ../scss/digital8.scss */
+.hamburgerbtn {
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  margin: 10px;
+}
+/* line 42, ../scss/digital8.scss */
+.hamburgerbtn .icon-bar {
+  background-color: #95c53f;
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+/* line 48, ../scss/digital8.scss */
+.hamburgerbtn .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+
+/* line 54, ../scss/digital8.scss */
+.hamburgerwrapper {
+  display: none;
+  text-indent: 25px;
+  background: #95c53f;
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 65, ../scss/digital8.scss */
+.closenav {
+  float: right;
+  color: #fff;
+  font-size: 2.0em;
+  margin-right: 10px;
+}
+
+/* line 71, ../scss/digital8.scss */
+.overlay-nav {
+  width: 200px;
+  margin: 0 auto;
+  clear: both;
+}
+
+/* line 77, ../scss/digital8.scss */
+.overlay-nav-max {
+  display: none;
+}
+
+/* line 81, ../scss/digital8.scss */
+.overlay-nav ul li {
+  list-style-type: none;
+}
+/* line 83, ../scss/digital8.scss */
+.overlay-nav ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.0em;
+}
+/* line 87, ../scss/digital8.scss */
+.overlay-nav ul li a:hover {
+  color: #5b7925 !important;
+}
+
+/* line 93, ../scss/digital8.scss */
+.activelink {
+  color: #5b7925 !important;
+}
+
+/* line 97, ../scss/digital8.scss */
+.video {
+  height: 309px;
+  background: #eeeeee;
+}
+
+/* line 102, ../scss/digital8.scss */
+.empowering {
+  background: #e1e1e1;
+}
+
+/* line 106, ../scss/digital8.scss */
+.servicequadrants {
+  background: #d5d5d5;
+}
+
+/* line 110, ../scss/digital8.scss */
+.recentlylaunched {
+  clear: both;
+  background: #c8c8c8;
+}
+
+/* line 115, ../scss/digital8.scss */
+.footer {
+  background: #bbbbbb;
+}
+
+@media only screen and (min-width: 480px) {
+  /* line 122, ../scss/digital8.scss */
+  .servicequadrants .article {
+    width: 50%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 131, ../scss/digital8.scss */
+  .hamburgerbtn {
+    display: none;
+  }
+
+  /* line 134, ../scss/digital8.scss */
+  .overlay-nav-max {
+    display: block;
+    list-style-type: none;
+  }
+  /* line 139, ../scss/digital8.scss */
+  .overlay-nav-max li {
+    display: inline;
+  }
+  /* line 141, ../scss/digital8.scss */
+  .overlay-nav-max li a {
+    color: #bbbbbb;
+    text-transform: uppercase;
+    font-size: 1.0em;
+  }
+  /* line 145, ../scss/digital8.scss */
+  .overlay-nav-max li a:hover {
+    color: #5b7925 !important;
+  }
+
+  /* line 153, ../scss/digital8.scss */
+  .servicequadrants .article {
+    width: 25%;
+  }
+}

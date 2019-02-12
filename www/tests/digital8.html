@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+    <title>jQuery.simpleFAQ QUnit Test Runner</title>
+    <link rel='stylesheet' href='/bower_components/qunit/qunit/qunit.css'>
+</head>
+<body>
+<div id="qunit"></div> <!-- QUnit fills this with results, etc -->
+<div id='qunit-fixture'>
+
+    <!-- any HTML you want to be present in each test (will be reset for each test) -->
+
+</div>
+<iframe id="testframe" src="/digital8.html" height="500" width="100%"></iframe>
+<script src='/bower_components/jquery/dist/jquery.min.js'></script>
+<script src='/bower_components/qunit/qunit/qunit.js'></script>
+<script>
+    var $q = jQuery.noConflict(true),
+        $ = null,
+        jQuery = null;
+
+    $q(function() {   // fire event when iframe is ready
+        $q('#testframe').load(function() {
+            // Get the jQuery Object from the iframe page
+            $ = window.frames[0].jQuery;
+
+            test('test hamburger button open close', 3, function() {
+                // On start wrapper is hidden.
+                ok($('.hamburgerwrapper').is(':hidden'));
+
+                // Simulate a click of hamburger button
+                $('.hamburgerbtn').click();
+
+                // Now wrapper should be visible
+                ok($('.hamburgerwrapper').is(':visible'));
+
+                // Click close X to close
+                $('.closenav').click();
+
+                // wrapper should be hidden
+                ok($('.hamburgerwrapper').is(':hidden'));
+            });
+
+        });
+    });
+</script>
+</body>
+</html>

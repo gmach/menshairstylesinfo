@@ -1,0 +1,375 @@
+@import url(../../bower_components/normalize.css/normalize.css);
+/* line 11, ../scss/base/_scaffolding.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 14, ../scss/base/_scaffolding.scss */
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 22, ../scss/base/_scaffolding.scss */
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 27, ../scss/base/_scaffolding.scss */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #333333;
+  background-color: #fff;
+}
+
+/* line 38, ../scss/base/_scaffolding.scss */
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+/* line 42, ../scss/base/_scaffolding.scss */
+a:hover, a:focus {
+  color: #2a6496;
+  text-decoration: underline;
+}
+
+/* line 55, ../scss/base/_scaffolding.scss */
+figure {
+  margin: 0;
+}
+
+/* line 62, ../scss/base/_scaffolding.scss */
+img {
+  vertical-align: middle;
+}
+
+/* line 67, ../scss/base/_scaffolding.scss */
+.img-responsive {
+  display: block;
+  width: 100% \9;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 71, ../scss/base/_scaffolding.scss */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  /* line 71, ../scss/base/_scaffolding.scss */
+  .container {
+    width: 768px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 71, ../scss/base/_scaffolding.scss */
+  .container {
+    width: 992px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 71, ../scss/base/_scaffolding.scss */
+  .container {
+    width: 1200px;
+  }
+}
+
+/* line 9, ../scss/base/_typeography.scss */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+/* line 17, ../scss/base/_typeography.scss */
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* line 23, ../scss/base/_typeography.scss */
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 30, ../scss/base/_typeography.scss */
+h1, .h1 {
+  font-size: 36px;
+}
+
+/* line 31, ../scss/base/_typeography.scss */
+h2, .h2 {
+  font-size: 30px;
+}
+
+/* line 32, ../scss/base/_typeography.scss */
+h3, .h3 {
+  font-size: 24px;
+}
+
+/* line 33, ../scss/base/_typeography.scss */
+h4, .h4 {
+  font-size: 18px;
+}
+
+/* line 34, ../scss/base/_typeography.scss */
+h5, .h5 {
+  font-size: 14px;
+}
+
+/* line 35, ../scss/base/_typeography.scss */
+h6, .h6 {
+  font-size: 12px;
+}
+
+/* line 41, ../scss/base/_typeography.scss */
+p {
+  margin: 0 0 10px;
+}
+
+/* line 47, ../scss/base/_typeography.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 48, ../scss/base/_typeography.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 49, ../scss/base/_typeography.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 50, ../scss/base/_typeography.scss */
+.text-justify {
+  text-align: justify;
+}
+
+/* line 51, ../scss/base/_typeography.scss */
+.text-nowrap {
+  white-space: nowrap;
+}
+
+/* line 54, ../scss/base/_typeography.scss */
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+/* line 55, ../scss/base/_typeography.scss */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* line 56, ../scss/base/_typeography.scss */
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+/* line 9, ../scss/base/_utilities.scss */
+.clearfix {
+  *zoom: 1;
+}
+/* line 2, ../scss/base/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+/* line 7, ../scss/base/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 12, ../scss/base/_utilities.scss */
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 15, ../scss/base/_utilities.scss */
+.pull-right {
+  float: right !important;
+}
+
+/* line 18, ../scss/base/_utilities.scss */
+.pull-left {
+  float: left !important;
+}
+
+/* line 27, ../scss/base/_utilities.scss */
+.hide {
+  display: none !important;
+}
+
+/* line 30, ../scss/base/_utilities.scss */
+.show {
+  display: block !important;
+}
+
+/* line 33, ../scss/base/_utilities.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 41, ../scss/base/_utilities.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* line 5, ../scss/components/_buttons.scss */
+.dangerbtn {
+  border: 1px solid red;
+}
+
+/* line 9, ../scss/components/_buttons.scss */
+.dangerbtn {
+  color: red;
+  /*  &:active,
+    &.active {
+  
+    }*/
+}
+
+/* line 11, ../scss/base.scss */
+.title {
+  color: black;
+}
+
+/* line 14, ../scss/base.scss */
+.nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 19, ../scss/base.scss */
+.nav a {
+  display: block;
+  margin-bottom: 10px;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background: #e44d26;
+}
+
+/* line 32, ../scss/base.scss */
+.nav a:hover,
+.nav a:visited {
+  color: white;
+}
+
+/* line 37, ../scss/base.scss */
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* line 41, ../scss/base.scss */
+.main {
+  padding: 30px 0;
+}
+
+/* line 45, ../scss/base.scss */
+.main-h1 {
+  font-size: 2em;
+}
+
+/* line 49, ../scss/base.scss */
+.right-main {
+  background: #f16529;
+  color: white;
+  padding: 0px 5% 10px;
+}
+
+/* line 56, ../scss/base.scss */
+.ie7 .title {
+  padding-top: 20px;
+}
+
+@media only screen and (min-width: 480px) {
+  /* line 63, ../scss/base.scss */
+  .nav a {
+    float: left;
+    width: 27%;
+    margin: 0 1.7%;
+    padding: 25px 2%;
+    margin-bottom: 0;
+  }
+
+  /* line 71, ../scss/base.scss */
+  .firstNav {
+    margin-left: 0;
+  }
+
+  /* line 75, ../scss/base.scss */
+  .lastNav {
+    margin-right: 0;
+  }
+
+  /* line 79, ../scss/base.scss */
+  .nav li {
+    display: inline;
+  }
+
+  /* line 83, ../scss/base.scss */
+  .oldie .nav a {
+    margin: 0 0.7%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 91, ../scss/base.scss */
+  .right-main {
+    -webkit-box-shadow: 0 5px 10px #aaa;
+    -moz-box-shadow: 0 5px 10px #aaa;
+    box-shadow: 0 5px 10px #aaa;
+  }
+
+  /* line 97, ../scss/base.scss */
+  .title {
+    float: left;
+  }
+
+  /* line 101, ../scss/base.scss */
+  .nav {
+    float: right;
+    width: 38%;
+  }
+
+  /* line 106, ../scss/base.scss */
+  .left-main {
+    float: left;
+    width: 57%;
+  }
+
+  /* line 111, ../scss/base.scss */
+  .right-main {
+    float: right;
+    width: 28%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  /* line 119, ../scss/base.scss */
+  .container {
+    width: 1026px;
+    /* 1140px - 10% for margins */
+    margin: 0 auto;
+  }
+}

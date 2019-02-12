@@ -1,0 +1,5 @@
+.sass-cache
+.git
+.DS_Store
+.idea
+dist

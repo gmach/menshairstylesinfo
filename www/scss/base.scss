@@ -1,0 +1,124 @@
+@import "../../bower_components/normalize.css/normalize.css";
+@import "base/variables";
+@import "base/mixins";
+@import "base/scaffolding";
+@import "base/typeography";
+@import "base/utilities";
+
+@import "components/buttons";
+
+//Mobile first progress enhancement
+.title {
+  color: black;
+}
+.nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  display: block;
+  margin-bottom: 10px;
+  padding: 15px 0;
+
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+
+  color: white;
+  background: #e44d26;
+}
+
+.nav a:hover,
+.nav a:visited {
+  color: white;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.main {
+  padding: 30px 0;
+}
+
+.main-h1 {
+  font-size: 2em;
+}
+
+.right-main {
+  background: #f16529;
+  color: white;
+  padding: 0px 5% 10px;
+}
+
+
+.ie7 .title {
+  padding-top: 20px;
+}
+
+// small width
+@media only screen and (min-width: $screen-phone) {
+
+  .nav a {
+    float: left;
+    width: 27%;
+    margin: 0 1.7%;
+    padding: 25px 2%;
+    margin-bottom: 0;
+  }
+
+  .firstNav {
+    margin-left: 0;
+  }
+
+  .lastNav {
+    margin-right: 0;
+  }
+
+  .nav li {
+    display: inline;
+  }
+
+  .oldie .nav a {
+    margin: 0 0.7%;
+  }
+}
+
+//Middle width
+@media only screen and (min-width: $screen-tablet) {
+  //CS33 Effects
+  .right-main {
+    -webkit-box-shadow: 0 5px 10px #aaa;
+    -moz-box-shadow: 0 5px 10px #aaa;
+    box-shadow: 0 5px 10px #aaa;
+  }
+
+  .title {
+    float: left;
+  }
+
+  .nav {
+    float: right;
+    width: 38%;
+  }
+
+  .left-main {
+    float: left;
+    width: 57%;
+  }
+
+  .right-main {
+    float: right;
+    width: 28%;
+  }
+}
+
+// Maximum screen width
+@media only screen and (min-width: $screen-desktop) {
+  .container {
+    width: 1026px; /* 1140px - 10% for margins */
+    margin: 0 auto;
+  }
+}
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/css3.css"/>
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+</head>
+<body>
+<div>this text has no shadow</div>
+<div class='has-single-shadow'>this text has a shadow</div>
+<div class='has-custom-shadow'>this text has a custom shadow</div>
+
+<div class="box">Box</div>
+
+
+<div class="figure-50">
+    <figure>
+        <iframe src="https://www.youtube.com/embed/4Fqg43ozz7A"></iframe>
+    </figure>
+</div>
+
+<input id='my-ok' type="text">
+<script>
+    document.getElementById('my-ok').onkeypress = function() {
+        var self = this;
+        setTimeout(function() {
+            self.value = self.value.toUpperCase();
+        }, 0);
+    };
+
+/*
+    var timer = setTimeout(function() {
+        if (somecondition) {
+            setTimeout(arguments.callee, 10);
+        }
+    }, 10);
+
+*/
+
+
+        // to avoid polluting global space use IIFE
+    (function() {
+        var somevar = 1;
+        var newfun = function() {
+            console.log('somevar = ' + somevar);
+        }
+
+        newfun();
+    })();
+    //newfunc is not available here
+</script>
+
+</body>
+</html>

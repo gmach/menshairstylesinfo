@@ -1,0 +1,60 @@
+$default-text-shadow-color: rgba(red, 0.6);
+$default-text-shadow-blur: 3px;
+$default-text-shadow-v-offset: 1px;
+
+@import "compass/css3";
+
+// Uses defaults set before the import above
+.has-single-shadow {
+  @include single-text-shadow;
+}
+
+// Can output up to ten text shadows
+.has-custom-shadow {
+  @include text-shadow(rgba(blue, 0.2) 1px 1px 0, rgba(blue, 0.2) 2px 2px 0, rgba(blue, 0.2) 3px 3px 0);
+}
+
+.box {
+  background: #2db34a;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 95px;
+  line-height: 95px;
+  text-align: center;
+  width: 95px;
+}
+
+.box:hover {
+  background: #ff7b29;
+  border-radius: 50%;
+}
+
+.csstransitions .box {
+  @include single-transition(background, 1s, linear, 0);
+  @include single-transition(border-radius, 1s, linear, 0);
+}
+
+figure {
+  height: 0; /* For IE */
+  margin: 0 0 24px 0;
+  padding-bottom: 56.25%; /* 16:9 and only for IE5.5 */
+  position: relative;
+  width: 100%;
+}
+.figure-50 {
+  width: 50%;
+}
+iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+::selection {
+  background: #fadb00;
+  color: #000;
+  text-shadow: none;
+}
