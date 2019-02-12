@@ -64,16 +64,7 @@ module.exports = function(grunt) {
             srcPath: 'www/css/',
             deployPath: 'www/css/'
         },
-/*
-        sass: {
-            dist: {
-                files: {
-                    '<%= meta.deployPath %>main.css' : '<%= meta.deployPath %>main.scss',
-                    '<%= meta.deployPath %>digital8.css' : '<%= meta.deployPath %>digital8.scss'
-                }
-            }
-        },
-*/
+
         compass: {
             dist: {
                 options: {
