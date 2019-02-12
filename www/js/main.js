@@ -8,5 +8,5 @@ var buzzcut = new HairStyleInfo('buzzcut', 'The Buzz Cut', 'This term can refer 
 var hairstyles = { buzzcut: buzzcut};
 
 $(function() {
-    document.getElementsByClassName('description')[0].innerHTML = buzzcut.description;
+    //document.getElementsByClassName('description')[0].innerHTML = buzzcut.description;
 });

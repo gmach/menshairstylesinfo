@@ -209,9 +209,10 @@ body {
   text-align: center;
   font-size: 3rem;
 }
-/* line 21, ../scss/main.scss */
-.main .description {
-  font-size: 1.5rem;
+
+/* line 22, ../scss/main.scss */
+.description {
+  font-size: 1rem;
   text-align: left;
   letter-spacing: 1px;
   line-height: 2rem;
@@ -281,21 +282,26 @@ footer {
   .container {
     max-width: 720px;
   }
+
+  /* line 78, ../scss/main.scss */
+  .description {
+    font-size: 1.5rem;
+  }
 }
 @media (min-width: 992px) {
-  /* line 81, ../scss/main.scss */
+  /* line 85, ../scss/main.scss */
   .container {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  /* line 88, ../scss/main.scss */
+  /* line 92, ../scss/main.scss */
   .container {
     max-width: 1050px;
   }
 }
 @media screen and (min-width: 900px) {
-  /* line 93, ../scss/main.scss */
+  /* line 97, ../scss/main.scss */
   .navigation {
     height: 140px;
   }
