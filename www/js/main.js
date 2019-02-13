@@ -1,3 +1,17 @@
+
+// This IIFE demonstrates when calling await it only 'blocks' the current executing scope waiting
+// until the promise resolves but continues any parent scope thread execution.
+// If it is the main thread executing then it will pause as expected.
+(async () => {
+    async function someAsyncFn() {
+        console.log(await new Promise(resolve => setTimeout(() => resolve('after 2 secs from first await'), 2000)));
+    }
+    someAsyncFn();
+    console.log('after calling someAsyncFn function');
+    console.log(await new Promise(resolve => setTimeout(() => resolve('after 1 sec from second await'), 1000)));
+    console.log('after second await');
+})();
+
 // This function showcases 3 ways to wait for multiple asynchronous ajax calls
 async function go() {
     let styles = ['buzzcut', 'caesar'];
@@ -71,21 +85,33 @@ navmenulist.appendChild(newListItem);
 
 //go();
 
+
 $(function() {
     let s = window.location.search;
     let styleString = s.substring(3);
     if (styleString == "" || styleString == undefined)
         return console.error('Style Not Found!');
-    fetch('/' + styleString + '/info.json')
-    .then(response => response.json())
-    .then(data => {
-        let style = new HairStyleInfo(data);
+    let style = JSON.parse(sessionStorage.getItem(styleString));
+    if(style) {
+        displayStyle(style);
+    } else {
+        fetch('/' + styleString + '/info.json')
+            .then(response => response.json())
+        .then(data => {
+            style = new HairStyleInfo(data);
+            sessionStorage.setItem(styleString, JSON.stringify(style));
+            displayStyle(style);
+        }).catch(err => console.error(err));
+    }
+
+    function displayStyle(style) {
         document.title = style.title;
         document.getElementsByClassName('title')[0].innerHTML = style.title;
         document.getElementsByClassName('description')[0].innerHTML = style.description;
-        document.getElementsByClassName('mainImage')[0].src = style.mainImage;;
+        document.getElementsByClassName('mainImage')[0].src = style.mainImage;
         document.getElementsByClassName('image1')[0].src = style.image1;
         document.getElementsByClassName('image2')[0].src = style.image2;
         document.getElementsByClassName('image3')[0].src = style.image3;
-    }).catch(err => console.error(err));
+    }
+
 });
