@@ -2,27 +2,158 @@
 @import "compass/utilities";
 @import "menu";
 
+// Time Magazine fonts
+@font-face {
+  font-family: Adobe Caslon;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/AdobeCaslonPro-Regular.woff2") format("woff2"),url("/fonts/AdobeCaslonPro-Regular.woff") format("woff")
+}
+
+@font-face {
+  font-family: Adobe Caslon;
+  font-style: italic;
+  font-weight: 400;
+  src: url("/fonts/AdobeCaslonPro-Italic.woff2") format("woff2"),url("/fonts/AdobeCaslonPro-Italic.woff") format("woff")
+}
+
+@font-face {
+  font-family: Adobe Caslon;
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/AdobeCaslonPro-SemiBold.woff2") format("woff2"),url("/fonts/AdobeCaslonPro-SemiBold.woff") format("woff")
+}
+
+@font-face {
+  font-family: Adobe Caslon;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/AdobeCaslonPro-Bold.woff2") format("woff2"),url("/fonts/AdobeCaslonPro-Bold.woff") format("woff")
+}
+
+@font-face {
+  font-family: Adobe Caslon;
+  font-style: italic;
+  font-weight: 700;
+  src: url("/fonts/AdobeCaslonPro-BoldItalic.woff2") format("woff2"),url("/fonts/AdobeCaslonPro-BoldItalic.woff") format("woff")
+}
+
+@font-face {
+  font-family: ElenaInitial;
+  src: url("/fonts/elenawebregular.woff2") format("woff2"),url("/fonts/elenawebregular.woff") format("woff")
+}
+
+
+//Smashing Magazine fonts
+@font-face{
+  font-family: Elena;
+  src: url("/fonts/elenawebregular.woff2") format("woff2"),url("/fonts/elenawebregular.woff") format("woff")
+}
+
+@font-face {
+  font-family: Elena;
+  src:url("/fonts/elenawebregularitalic.woff2") format("woff2"),url("/fonts/elenawebregularitalic.woff") format("woff");font-style:italic
+}
+
+@font-face {
+  font-family: Elena;
+  src: url("/fonts/elenawebbold.woff2") format("woff2"),url("/fonts/elenawebbold.woff") format("woff");
+  font-weight:700
+}
+
+@font-face {
+  font-family: Elena;
+  src: url("/fonts/elenawebbolditalic.woff2") format("woff2"),url("/fonts/elenawebbolditalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic
+}
+
+@font-face{
+  font-family: MijaInitial;
+  src: url("/fonts/mija_regular-webfont.woff2") format("woff2"),url("/fonts/mija_regular-webfont.woff") format("woff")
+}
+
+@font-face {
+  font-family: Mija;
+  src: url("/fonts/mija_regular-webfont.woff2") format("woff2"),url("/fonts/mija_regular-webfont.woff") format("woff")
+}
+
+@font-face {
+  font-family: Mija;
+  src: url("/fonts/mija_bold-webfont.woff2") format("woff2"),url("/fonts/mija_bold-webfont.woff") format("woff");
+  font-weight:700
+}
+
+$header-color: #d33a2c;
+$palegrey: #f3f3f3;
+$fontTimes: 'Adobe Caslon,Georgia,Times New Roman,Times,serif';
+$fontElena: 'Elena';
+
 body {
-  font-family: 'ZCOOL XiaoWei', serif;
+  font-family: $fontElena;
+  font-style: normal;
+  font-weight: 400;
   font-size: 16px;
+}
+::selection {
+  color: #fff;
+  text-shadow: none;
+  background: $header-color;
+}
+dt {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  color: $header-color;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+dd {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.25px;
 }
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 0;
   margin-right: auto;
   margin-left: auto;
 }
+.footer {
+  padding-right: 0;
+  text-align: center;
+  background-color: #f6f6f6;
+  border-radius: 11px;
+  padding: 2.5em 0;
+}
+.comments-title {
+  font-size: 1.9em;
+  text-align: left;
+  border-top: 1px solid $palegrey;
+  line-height: 1.333em;
+  margin: 20x 0;
+  padding: 0;
+  clear: both;
+}
+
 .main {
   .title {
     text-align: center;
+    color: $header-color;
     font-size: 3rem;
+    line-height: 56.8512px;
+    letter-spacing: -0.25px;
+    font-family: Mija;
+    font-feature-settings: "onum" 1;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
   }
 }
 .description {
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: left;
-  letter-spacing: 1px;
+  letter-spacing: -0.25px;
   line-height: 2rem;
 }
 .row {
@@ -32,9 +163,6 @@ body {
   }
   .col2 {
     flex: 1;
-    img:nth-child(2) {
-      margin-top: -2px;
-    }
   }
 }
 .mainImage {
@@ -45,10 +173,25 @@ body {
 .image1 {
   width: 100%;
   height: 100%;
+  border-radius: 15px 0 0 15px;
+  display: none;
+  &[src] {
+    display: block;
+  }
+}
+.image2 {
+  border-radius: 0 15px 0 0;
+}
+.image3 {
+  border-radius: 0 0 15px 0;
 }
 .image2, .image3 {
   width: 100%;
   height: 50%;
+  display: none;
+  &[src] {
+    display: block;
+  }
 }
 .img-fluid {
   max-width: 100%;
@@ -65,10 +208,6 @@ body {
   .necklineimg {
     width: 100%;
   }
-}
-footer {
-  text-align: center;
-  margin: 3rem 0;
 }
 
 // Small devices (landscape phones, 576px and up)

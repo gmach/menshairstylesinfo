@@ -4,7 +4,7 @@ $breakpoint: 900px;
 $nav-height: 70px;
 $nav-background: #262626;
 $nav-font-color: #ffffff;
-$link-hover-color: #2581DC;
+$link-hover-color: #d33a2c;
 
 // Outer navigation wrapper
 .navigation {
@@ -52,6 +52,7 @@ nav {
         color: $nav-font-color;
         text-decoration: none;
         text-align: center;
+        font-size: 2rem;
         &:hover {
           background: $link-hover-color;
           color: $nav-font-color;
