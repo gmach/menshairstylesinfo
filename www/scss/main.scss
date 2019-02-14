@@ -57,6 +57,15 @@ body {
 .nav-mobile {
   height: auto;
 }
+.glossaryimgages {
+  @include clearfix;
+  .sideimage {
+    width: 33%;
+  }
+  .necklineimg {
+    width: 100%;
+  }
+}
 footer {
   text-align: center;
   margin: 3rem 0;

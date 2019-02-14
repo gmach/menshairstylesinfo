@@ -266,42 +266,56 @@ body {
 }
 
 /* line 60, ../scss/main.scss */
+.glossaryimgages {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 62, ../scss/main.scss */
+.glossaryimgages .sideimage {
+  width: 33%;
+}
+/* line 65, ../scss/main.scss */
+.glossaryimgages .necklineimg {
+  width: 100%;
+}
+
+/* line 69, ../scss/main.scss */
 footer {
   text-align: center;
   margin: 3rem 0;
 }
 
 @media (min-width: 576px) {
-  /* line 67, ../scss/main.scss */
+  /* line 76, ../scss/main.scss */
   .container {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  /* line 74, ../scss/main.scss */
+  /* line 83, ../scss/main.scss */
   .container {
     max-width: 720px;
   }
 
-  /* line 77, ../scss/main.scss */
+  /* line 86, ../scss/main.scss */
   .description {
     font-size: 1.5rem;
   }
 }
 @media (min-width: 992px) {
-  /* line 84, ../scss/main.scss */
+  /* line 93, ../scss/main.scss */
   .container {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  /* line 91, ../scss/main.scss */
+  /* line 100, ../scss/main.scss */
   .container {
     max-width: 1050px;
   }
 }
 @media screen and (min-width: 900px) {
-  /* line 96, ../scss/main.scss */
+  /* line 105, ../scss/main.scss */
   .navigation {
     height: 140px;
   }
