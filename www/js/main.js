@@ -30,7 +30,7 @@ $(function() {
     let s = window.location.search;
     let styleString = s.substring(3);
     if (styleString == "" || styleString == undefined)
-        return console.error('Style Not Found!');
+        return console.log('Style Not Found. Showing home page.');
     let style = JSON.parse(sessionStorage.getItem(styleString));
     if(style) {
         displayStyle(style);
