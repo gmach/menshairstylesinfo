@@ -35,7 +35,7 @@ $(function() {
     if(style) {
         displayStyle(style);
     } else {
-        fetch('/' + styleString + '/info.json')
+        fetch('../' + styleString + '/info.json')
             .then(response => response.json())
         .then(data => {
             style = new HairStyleInfo(data);
