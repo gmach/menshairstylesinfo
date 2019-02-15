@@ -20,10 +20,10 @@ function HairStyleInfo(data) {
     this.style = data.style;
     this.title = 'The ' + data.title;
     this.description = data.description;
-    this.mainImage = '/' + data.style + '/' + data.style + 'main.jpg';
-    this.image1 = '/' + data.style + '/' + data.style + '1.jpg';
-    this.image2 = '/' + data.style + '/' + data.style + '2.jpg';
-    this.image3 = '/' + data.style + '/' + data.style + '3.jpg';
+    this.mainImage = data.style + '/' + data.style + 'main.jpg';
+    this.image1 = data.style + '/' + data.style + '1.jpg';
+    this.image2 = data.style + '/' + data.style + '2.jpg';
+    this.image3 = data.style + '/' + data.style + '3.jpg';
 }
 
 $(function() {
@@ -35,7 +35,7 @@ $(function() {
     if(style) {
         displayStyle(style);
     } else {
-        fetch('../' + styleString + '/info.json')
+        fetch('/' + styleString + '/info.json')
             .then(response => response.json())
         .then(data => {
             style = new HairStyleInfo(data);
