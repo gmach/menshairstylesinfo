@@ -15,61 +15,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
 </head>
 <body>
-<header class="header">
-  <section class="navigation">
-    <div class="nav-container">
-      <nav>
-        <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
-        <ul class="nav-list" id="navmenulist">
-          <li class="nav-item">
-            <a class="nav-link" href="/?s=asymmetrical">Asymmetrical</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/?s=businessman">BusinessMan</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/?s=buzzcut">Buzz Cut</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/?s=caesar">Caesar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/?s=crewcut">Crew Cut</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/?s=fauxhawk">Faux Hawk</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/?s=highandtight">High and Tight</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/?s=mohawk">Mohawk</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/?s=pompadour">Pompadour</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/?s=quiff">Quiff</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/?s=slickedback">Slicked Back</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/?s=spikyhair">Spiky Hair</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/?s=skinfade">Skin Fade</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/?s=undercut">Under Cut</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/glossary/glossary.html">Glossary</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </section>
+<header class="container">
 </header>
 <main class="main container">
   <h1 class="title">Barber Glossary</h1>
@@ -100,7 +46,18 @@
     </dd>
   </dl>
   <div class="glossaryimgages">
-    <img class="sideimage" src="tapered.jpg"><img class="sideimage" src="skinfade.jpg"><img class="sideimage" src="disconnected.jpg">
+    <figure class="sideimage">
+      <img src="tapered.jpg" alt="Tapered">
+      <figcaption>Tapered</figcaption>
+    </figure>
+    <figure class="sideimage">
+      <img src="skinfade.jpg" alt="Skin Fade">
+      <figcaption>Skin Fade</figcaption>
+    </figure>
+    <figure class="sideimage">
+    <img src="disconnected.jpg" alt="Disconnected">
+      <figcaption>Disconnected</figcaption>
+    </figure>
   </div>
   <div class="glossaryimgages">
     <h3>Necklines / Nape</h3>
@@ -167,13 +124,20 @@
       </p>
     </dd>
   </dl>
+</main>
 <footer class="container">
 </footer>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
-  $(function(){
-    $('footer').load("/footer.html");
+  $('header').load("/header.html", function() {
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+      $(this).parent().parent().toggleClass('autoheight');
+    });
   });
+  $('footer').load("/footer.html");
 </script>
+<script src="/js/main.js"></script>
 </body>
 </html>

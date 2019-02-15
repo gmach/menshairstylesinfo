@@ -95,10 +95,13 @@ body {
   font-weight: 400;
   font-size: 16px;
 }
+
 ::selection {
   color: #fff;
   text-shadow: none;
   background: $header-color;
+  margin: 0;
+  padding: 0;
 }
 dt {
   text-transform: uppercase;
@@ -197,13 +200,20 @@ dd {
   max-width: 100%;
   height: auto;
 }
-.nav-mobile {
-  height: auto;
-}
 .glossaryimgages {
   @include clearfix;
-  .sideimage {
+  figure {
     width: 33%;
+    float: left;
+    margin: 0;
+    img {
+      width: 100%;
+    }
+    figcaption {
+      text-align: center;
+      font-style: italic;
+      font-size: 1.2rem;
+    }
   }
   .necklineimg {
     width: 100%;
@@ -238,10 +248,5 @@ dd {
 @media (min-width: 1200px) {
   .container {
     max-width: 1050px;
-  }
-}
-@media screen and (min-width: $breakpoint) {
-  .navigation {
-    height: 140px;
   }
 }
