@@ -32,12 +32,14 @@ $(function() {
     if (styleString == "" || styleString == undefined)
         return console.log('Style Not Found. Showing home page.');
     if (styleString === "glossary")
-        return window.location = '../glossary/glossary.html';
+        return window.location = 'glossary/glossary.html';
+    if (window.location.pathname.includes('glossary.html'))
+        return window.location = '../' + s;
     let style = JSON.parse(sessionStorage.getItem(styleString));
     if(style) {
         displayStyle(style);
     } else {
-        fetch('/' + styleString + '/info.json')
+        fetch(styleString + '/info.json')
             .then(response => response.json())
         .then(data => {
             style = new HairStyleInfo(data);
