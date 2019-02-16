@@ -31,6 +31,8 @@ $(function() {
     let styleString = s.substring(3);
     if (styleString == "" || styleString == undefined)
         return console.log('Style Not Found. Showing home page.');
+    if (styleString === "glossary")
+        return window.location = '../glossary/glossary.html';
     let style = JSON.parse(sessionStorage.getItem(styleString));
     if(style) {
         displayStyle(style);

@@ -402,56 +402,57 @@ dd {
 }
 
 /* line 203, ../scss/main.scss */
-.glossaryimgages {
+.glossaryimages {
   overflow: hidden;
   *zoom: 1;
 }
 /* line 205, ../scss/main.scss */
-.glossaryimgages figure {
+.glossaryimages figure {
   width: 33%;
   float: left;
   margin: 0;
 }
 /* line 209, ../scss/main.scss */
-.glossaryimgages figure img {
+.glossaryimages figure img {
   width: 100%;
 }
 /* line 212, ../scss/main.scss */
-.glossaryimgages figure figcaption {
+.glossaryimages figure figcaption {
   text-align: center;
   font-style: italic;
   font-size: 1.2rem;
 }
 /* line 218, ../scss/main.scss */
-.glossaryimgages .necklineimg {
+.glossaryimages .necklineimg {
   width: 100%;
+  float: none;
 }
 
 @media (min-width: 576px) {
-  /* line 225, ../scss/main.scss */
+  /* line 226, ../scss/main.scss */
   .container {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  /* line 232, ../scss/main.scss */
+  /* line 233, ../scss/main.scss */
   .container {
     max-width: 720px;
   }
 
-  /* line 235, ../scss/main.scss */
+  /* line 236, ../scss/main.scss */
   .description {
     font-size: 1.5rem;
   }
 }
 @media (min-width: 992px) {
-  /* line 242, ../scss/main.scss */
+  /* line 243, ../scss/main.scss */
   .container {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  /* line 249, ../scss/main.scss */
+  /* line 250, ../scss/main.scss */
   .container {
     max-width: 1050px;
   }
