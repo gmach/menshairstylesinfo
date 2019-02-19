@@ -27,6 +27,7 @@ function HairStyleInfo(data) {
 }
 
 $(function() {
+    /*
     let s = window.location.search;
     let styleString = s.substring(3);
     if (styleString == "" || styleString == undefined)
@@ -57,5 +58,13 @@ $(function() {
         document.getElementsByClassName('image2')[0].src = style.image2;
         document.getElementsByClassName('image3')[0].src = style.image3;
     }
-
+    */
+    navMenu();
 });
+
+function navMenu() {
+    $('#nav-toggle').click(function() {
+        $('nav ul').slideToggle();
+        $(this).parent().parent().toggleClass('autoheight');
+    });
+}

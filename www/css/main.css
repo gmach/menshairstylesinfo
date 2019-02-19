@@ -428,31 +428,36 @@ dd {
   float: none;
 }
 
+/* line 223, ../scss/main.scss */
+.footer-menu-copyright {
+  text-align: center;
+}
+
 @media (min-width: 576px) {
-  /* line 226, ../scss/main.scss */
+  /* line 228, ../scss/main.scss */
   .container {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  /* line 233, ../scss/main.scss */
+  /* line 235, ../scss/main.scss */
   .container {
     max-width: 720px;
   }
 
-  /* line 236, ../scss/main.scss */
+  /* line 238, ../scss/main.scss */
   .description {
     font-size: 1.5rem;
   }
 }
 @media (min-width: 992px) {
-  /* line 243, ../scss/main.scss */
+  /* line 245, ../scss/main.scss */
   .container {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  /* line 250, ../scss/main.scss */
+  /* line 252, ../scss/main.scss */
   .container {
     max-width: 1050px;
   }

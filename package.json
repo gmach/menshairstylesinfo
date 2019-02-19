@@ -15,5 +15,7 @@
     "grunt-open": "^0.2.3",
     "grunt-parallel": "^0.5.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "prerender-node": "^3.2.1"
+  }
 }
